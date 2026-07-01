@@ -1,0 +1,4 @@
+- [x] Corrigir lógica de estado em `CircularRevealThemeWrapper.kt`
+- [x] Implementar camadas de tema (antigo vs novo) para efeito circular
+- [x] Atualizar `CircularRevealThemeWrapperPreview` para ser interativo
+- [x] Verificar funcionamento no Preview

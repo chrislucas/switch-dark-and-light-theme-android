@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SwitchDarkAndLightTheme</string>
+    <string name="title_activity_dark_theme_screen">DarkThemeScreenActivity</string>
+</resources>
