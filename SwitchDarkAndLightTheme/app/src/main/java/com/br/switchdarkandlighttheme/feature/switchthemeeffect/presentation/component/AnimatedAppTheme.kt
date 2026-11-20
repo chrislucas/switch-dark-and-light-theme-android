@@ -125,7 +125,7 @@ fun AnimatedAppThemeButtonLightPreviewState() {
                 modifier = Modifier.fillMaxSize(),
                 color = MaterialTheme.colorScheme.background
             ) {
-                StatelessToggleDarkThemeManagerButton(
+                StatelessThemeToggleButton(
                     isDarkTheme = isDarkTheme,
                     { isDarkTheme = !isDarkTheme }
                 )
@@ -145,7 +145,7 @@ fun AnimatedAppThemeButtonDarkPreviewState() {
                     .fillMaxSize()
                     .background(MaterialTheme.colorScheme.background),
             ) {
-                StatelessToggleDarkThemeManagerButton(
+                StatelessThemeToggleButton(
                     isDarkTheme = isDarkTheme,
                     { isDarkTheme = !isDarkTheme }
                 )

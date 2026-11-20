@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SwitchDarkAndLightTheme</string>
     <string name="title_activity_dark_theme_screen">DarkThemeScreenActivity</string>
+    <string name="title_activity_stateful_toggle_dark_theme_mactivity">
+        StatefulToggleDarkThemeMActivity
+    </string>
 </resources>

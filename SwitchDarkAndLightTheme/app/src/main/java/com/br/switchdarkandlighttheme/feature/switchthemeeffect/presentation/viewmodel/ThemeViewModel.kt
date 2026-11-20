@@ -16,16 +16,16 @@ import kotlinx.coroutines.launch
  */
 class ThemeViewModel(private val themePreferenceManager: ThemePreferenceManager) : ViewModel() {
 
-    val isDarkTheme: StateFlow<Boolean?> = themePreferenceManager.isDarkTheme
+    val isDarkTheme: StateFlow<Boolean> = themePreferenceManager.isDarkTheme
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
-            initialValue = null
+            initialValue = ThemePreferenceManager.IS_DEFAULT_DARK
         )
 
     fun toggleTheme() {
         viewModelScope.launch {
-            isDarkTheme.value?.let { themePreferenceManager.saveThemePreference(!it) }
+            isDarkTheme.value.let { themePreferenceManager.saveThemePreference(!it) }
         }
     }
 

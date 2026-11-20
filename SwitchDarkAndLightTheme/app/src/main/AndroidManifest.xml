@@ -27,7 +27,27 @@
             android:exported="true"
             android:label="@string/title_activity_dark_theme_screen"
             android:theme="@style/Theme.SwitchDarkAndLightTheme"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="switchthemeeffect" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".feature.switchthemeeffect.presentation.screen.StatefulToggleDarkThemeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_stateful_toggle_dark_theme_mactivity"
+            android:theme="@style/Theme.SwitchDarkAndLightTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="statefultoggledarktheme" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.br.switchdarkandlighttheme.feature.MultiDpiPreviews
 import com.br.switchdarkandlighttheme.feature.switchthemeeffect.presentation.component.AnimatedAppTheme
-import com.br.switchdarkandlighttheme.feature.switchthemeeffect.presentation.component.StateToggleDarkThemeManagerButton
+import com.br.switchdarkandlighttheme.feature.switchthemeeffect.presentation.component.StatefulCircularRevealThemeToggle
 
 /*
     https://share.google/aimode/AAxlgL2WkqGOz7pSb
@@ -37,11 +37,11 @@ fun ToggleThemeScreen(
 @Preview
 @MultiDpiPreviews
 @Composable
-fun StateToggleThemeButtonScreenPreview() {
+fun StatefulToggleThemeButtonScreenPreview() {
     var isDarkTheme by rememberSaveable { mutableStateOf(false) }
     ToggleThemeScreen(isDarkTheme) { isDark ->
         AnimatedAppTheme(darkTheme = isDark) {
-            StateToggleDarkThemeManagerButton(isDarkTheme = isDark)
+            StatefulCircularRevealThemeToggle(isDarkTheme = isDark)
         }
     }
 }

@@ -1,0 +1,11 @@
+Locally scoped data with CompositionLocal
+https://developer.android.com/develop/ui/compose/compositionlocal
+
+
+Anatomy of a theme in Compose
+https://developer.android.com/develop/ui/compose/designsystems/anatomy
+
+staticCompositionLocalOf
+https://composables.com/jetpack-compose/androidx.compose.runtime/runtime/functions/staticCompositionLocalOf/api
+
+

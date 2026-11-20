@@ -33,6 +33,13 @@ android {
     buildFeatures {
         compose = true
     }
+    testOptions {
+        unitTests {
+            // Robolectric precisa dos recursos Android (strings, temas, manifest
+            // mesclado) disponíveis nos testes de unidade da JVM.
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -47,11 +54,21 @@ dependencies {
     implementation(libs.androidx.datastore.preferences)
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.0")
 
+    // Testes de unidade (JVM) — inclui testes de Composables com Robolectric.
     testImplementation(libs.junit)
+    testImplementation(platform(libs.androidx.compose.bom))
+    testImplementation(libs.androidx.compose.ui.test.junit4)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.junit)
+    testImplementation(libs.androidx.test.core.ktx)
+
+    // Testes instrumentados (rodam em emulador/dispositivo).
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    // Registra a ComponentActivity vazia usada pelo createComposeRule(). Necessário
+    // tanto nos testes instrumentados quanto nos testes com Robolectric (variante debug).
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 }
