@@ -33,7 +33,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:scheme="switchthemeeffect" />
+                <data android:scheme="switchthemeeffect" android:host="darktheme" />
             </intent-filter>
         </activity>
         <activity
@@ -45,7 +45,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="statefultoggledarktheme" />
+                <data android:scheme="switchthemeeffect" android:host="statetoggle" />
             </intent-filter>
         </activity>
     </application>

@@ -6,13 +6,15 @@ plugins {
 android {
     namespace = "com.br.switchdarkandlighttheme"
     compileSdk {
-        version = release(37)
+        version = release(37) {
+            minorApiLevel = 1
+        }
     }
 
     defaultConfig {
         applicationId = "com.br.switchdarkandlighttheme"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
@@ -52,7 +54,11 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.datastore.preferences)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.0")
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.compose.foundation.layout)
+
+
 
     // Testes de unidade (JVM) — inclui testes de Composables com Robolectric.
     testImplementation(libs.junit)
