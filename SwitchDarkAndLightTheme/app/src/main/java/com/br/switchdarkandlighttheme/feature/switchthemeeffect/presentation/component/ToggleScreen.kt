@@ -7,7 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
-import com.br.switchdarkandlighttheme.feature.MultiDpiPreviews
+import com.br.switchdarkandlighttheme.core.ui.MultiDpiPreviews
 import com.br.switchdarkandlighttheme.feature.switchthemeeffect.presentation.component.AnimatedAppTheme
 import com.br.switchdarkandlighttheme.feature.switchthemeeffect.presentation.component.StatefulCircularRevealThemeToggle
 

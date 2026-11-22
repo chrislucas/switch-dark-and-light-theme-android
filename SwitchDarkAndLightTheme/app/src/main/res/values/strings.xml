@@ -4,4 +4,6 @@
     <string name="title_activity_stateful_toggle_dark_theme_mactivity">
         StatefulToggleDarkThemeMActivity
     </string>
+    <string name="title_activity_simple_tooltip">SimpleTooltipActivity</string>
+    <string name="title_activity_rich_tooltip">RichTooltipActivity</string>
 </resources>

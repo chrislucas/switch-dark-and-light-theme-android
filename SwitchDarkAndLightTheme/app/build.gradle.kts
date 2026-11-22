@@ -56,7 +56,15 @@ dependencies {
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
+
+    implementation("androidx.compose.material:material-icons-core")
+
+    implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.foundation.layout)
+    implementation(libs.androidx.compose.material.iconsExtended)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.material.ripple)
+    implementation(libs.androidx.compose.material3)
 
 
 

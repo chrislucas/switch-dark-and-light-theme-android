@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Grid
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,9 +39,25 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Text(text = "Hello $name!")
     }, modifier = modifier) { i ->
 
-        Grid(config = {}, modifier = Modifier.padding(i)) {
+        Grid(
+            config = {
+                repeat(2) {
+                    column(percentage = .5f)
+                }
 
+                repeat(1) {
+                    row(percentage = 1f)
+                }
+            },
+            modifier = Modifier.padding(i)
+        ) {
+            Card() {
+                Text(text = "Hello $name!")
+            }
 
+            Card() {
+                Text(text = "Hello $name!")
+            }
         }
     }
 

@@ -31,7 +31,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntSize
-import com.br.switchdarkandlighttheme.feature.MultiDpiPreviews
+import com.br.switchdarkandlighttheme.core.ui.MultiDpiPreviews
 import com.br.switchdarkandlighttheme.feature.switchthemeeffect.core.ui.DarkColors
 import com.br.switchdarkandlighttheme.feature.switchthemeeffect.core.ui.LightColors
 import kotlin.math.hypot

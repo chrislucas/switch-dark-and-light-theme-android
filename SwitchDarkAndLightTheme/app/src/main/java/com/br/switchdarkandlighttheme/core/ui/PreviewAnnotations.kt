@@ -1,4 +1,4 @@
-package com.br.switchdarkandlighttheme.feature
+package com.br.switchdarkandlighttheme.core.ui
 
 import androidx.compose.ui.tooling.preview.Preview
 

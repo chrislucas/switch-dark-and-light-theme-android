@@ -33,7 +33,9 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:scheme="switchthemeeffect" android:host="darktheme" />
+                <data
+                    android:host="darktheme"
+                    android:scheme="switchthemeeffect" />
             </intent-filter>
         </activity>
         <activity
@@ -45,7 +47,37 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="switchthemeeffect" android:host="statetoggle" />
+                <data
+                    android:host="statetoggle"
+                    android:scheme="switchthemeeffect" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".feature.compose.component.tootip.presentation.screen.SimpleTooltipActivity"
+            android:exported="true"
+            android:label="@string/title_activity_simple_tooltip"
+            android:theme="@style/Theme.SwitchDarkAndLightTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="statetoggle"
+                    android:scheme="simpletooltip" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".feature.compose.component.tootip.presentation.screen.RichTooltipActivity"
+            android:exported="true"
+            android:label="@string/title_activity_rich_tooltip"
+            android:theme="@style/Theme.SwitchDarkAndLightTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="statetoggle"
+                    android:scheme="richtooltip" />
             </intent-filter>
         </activity>
     </application>
